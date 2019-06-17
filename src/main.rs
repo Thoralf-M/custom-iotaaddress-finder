@@ -152,7 +152,7 @@ fn random_privatekey(_arr: &[i8; 3], tr: &Vec<i8>, index: usize) -> Vec<i8> {
   vec.to_vec()
 }
 
-pub fn int2trits(v: i64, out: &mut [i8]) {
+fn int2trits(v: i64, out: &mut [i8]) {
   let size = out.len();
   let negative = v < 0;
   let mut value = if negative { -v } else { v };
